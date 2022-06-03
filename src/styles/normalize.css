@@ -1,0 +1,12 @@
+.stage {
+  position: relative;
+  width: 256px;
+  height: 240px;
+  border: 1px solid black;
+  zoom: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #4F95F8;
+}
