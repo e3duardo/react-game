@@ -1,9 +1,17 @@
-.stage {
+.scene {
   position: relative;
   width: 256px;
   height: 240px;
   border: 1px solid black;
-  zoom: 0;
+  zoom: 1.5;
+  overflow: hidden;
+}
+
+.stage {
+  position: relative;
+  min-width: 256px;
+  height: 240px;
+  transition: .2s all linear;
 }
 
 body {

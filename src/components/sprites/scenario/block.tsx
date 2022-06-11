@@ -24,7 +24,7 @@ const Container = styled.div`
 function Block({ x, y, size = 1 }: { x: number, y: number, size?: number  }) {
   return <>
     {[...Array(size)].map((n, i) => (
-      <Container className='block' style={{ left: x * 16, bottom: (y + i) * 16 }} />
+      <Container className='block' style={{ left: x * 16, bottom: (y + i) * 16 }}  key={i}/>
     ))}
   </>
 }

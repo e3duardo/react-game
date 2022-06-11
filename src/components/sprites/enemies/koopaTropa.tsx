@@ -1,3 +1,4 @@
+import { Ref } from 'react';
 import styled from 'styled-components'
 
 import enemies from '../../../assets/enemies.png'
@@ -31,8 +32,8 @@ const Container = styled.div`
    }
 `
 
-function KoopaTropa({ x, y }:{ x: number, y: number }) {
-  return (<Container className='koopa-tropa' style={{ left: x * 16, bottom: y * 16 }} />);
+function KoopaTropa({ x, y, innerRef }:{ x: number, y: number, innerRef?: Ref<HTMLDivElement> }) {
+  return (<Container className='koopa-tropa' style={{ left: x * 16, bottom: y * 16 }} ref={innerRef}/>);
 } 
 
 

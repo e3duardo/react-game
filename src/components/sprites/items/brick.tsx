@@ -31,7 +31,7 @@ const Container = styled.div<{variant: Variant}>`
 function Brick({ x, y, size = 1, variant='normal' }: { x: number, y: number, size?: number, variant?: Variant }): JSX.Element {
   return <>
     {[...Array(size)].map((n, i) => (
-      <Container className='brick' style={{ left: x * 16, bottom: (y + i) * 16 }} variant={variant} />
+      <Container className='brick' style={{ left: x * 16, bottom: (y + i) * 16 }} variant={variant} key={i}/>
     ))}
   </>
 }

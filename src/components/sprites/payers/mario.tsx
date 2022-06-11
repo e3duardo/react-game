@@ -1,3 +1,4 @@
+import { Ref } from 'react';
 import styled from 'styled-components'
 
 import mario from '../../../assets/mario.png'
@@ -23,6 +24,9 @@ const Container = styled.div`
    animation-iteration-count: infinite;
    z-index: 7;
 
+   transition: .2s all linear;
+   transition: .2s all linear;
+
    @keyframes animation-mr {
      100% { 
        background-position-x: ${bgPos[1].x}px;
@@ -31,8 +35,9 @@ const Container = styled.div`
    }
  `
 
-function Mario({ x, y }: { x: number, y: number }) {
-  return <Container className='mario' style={{ left: x * 16, bottom: y * 16 }} />;
+function Mario({ x, y, innerRef }: { x: number, y: number, innerRef: Ref<HTMLDivElement> }) {
+  //
+  return <Container className='mario' ref={innerRef} style={{ left: x, bottom: y }}  />;
 }
 
 

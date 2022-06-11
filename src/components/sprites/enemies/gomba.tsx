@@ -1,3 +1,4 @@
+import { Ref } from 'react';
 import styled from 'styled-components'
 
 import enemies from '../../../assets/enemies.png'
@@ -21,7 +22,8 @@ const Container = styled.div`
    animation-name: animation-gb;
    animation-duration: .40s;
    animation-iteration-count: infinite;
-   z-index: 2;
+   z-index: 5;
+   transition: .2s all linear;
 
    @keyframes animation-gb {
      100% { 
@@ -31,8 +33,8 @@ const Container = styled.div`
    }
  `
 
-function Gomba({ x, y }: { x: number, y: number }) {
-  return <Container className='gomba' style={{ left: x * 16, bottom: y * 16 }} />;
+function Gomba({ x, y, innerRef }: { x: number, y: number, innerRef?: Ref<HTMLDivElement> }) {
+  return <Container className='gomba' style={{ left: x * 16, bottom: y * 16 }} ref={innerRef} />;
 }
 
 

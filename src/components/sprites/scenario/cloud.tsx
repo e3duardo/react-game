@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components'
 
 import tileset from '../../../assets/tileset.png'
@@ -74,10 +75,10 @@ function Cloud({ x, y, size = 0 }: { x: number, y: number, size?: number }) {
       <LeftBottom />
       {
         [...Array(size)].map((n, i) => (
-          <>
+          <React.Fragment  key={i}>
             <MiddleTop step={i+1}/>
             <MiddleBottom step={i+1}/>
-          </>
+          </React.Fragment>
         ))
       }
       <RightTop />

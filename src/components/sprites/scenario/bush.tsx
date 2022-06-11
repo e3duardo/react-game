@@ -51,7 +51,7 @@ function Bush({ x, y, size = 0 }: { x: number, y: number, size?: number }) {
     <Container className='bush' style={{ left: x * 16, bottom: y * 16 }} size={size}>
       <Left />
       {
-        [...Array(size)].map((n, i) => <Middle step={i + 1} />)
+        [...Array(size)].map((n, i) => <Middle step={i + 1}  key={i}/>)
       }
       <Right />
     </Container>
